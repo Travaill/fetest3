@@ -1,0 +1,124 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  font-family:'Microsoft YaHei';
+  color: #555;
+  line-height: 1.7;
+background-color: beige;
+}
+.login a{
+  color: grey;
+}
+.registered a{
+  color: blue;
+}
+.registered,a.active
+{
+  border-bottom: 2px solid blue;
+  color: blue;
+}
+
+.blog
+{
+  height: 196px;
+  font-size: 60px;
+   text-align: center;
+   padding-top: 60px;
+
+}
+.header
+{
+  width: 368px;
+  height: 40px;
+  margin: 0 auto;
+
+}
+.registered
+{
+  font-family:'Microsoft YaHei';
+  font-size: 28px;
+
+  float: left;
+    text-align: center;
+    margin-left: 40px;
+}
+.login
+{
+  font-family:'Microsoft YaHei';
+  font-size: 28px;
+
+  float: left;
+    text-align: center;
+      margin-left: 104px;
+}
+
+.container
+{
+  position: relative;
+  padding-top: 0px;
+  width: 368px;
+  height: 380px;
+  margin: 0 auto;
+}
+}
+.blog
+{
+  font-size: 60px;
+   text-align: center;
+}
+.container
+{
+  position: relative;
+  padding-top: 20px;
+  width: 368px;
+  height: 380px;
+  margin: 0 auto;
+}
+.form
+{
+    text-align: left;;
+    border: 1px solid #e8e8e8;
+}
+#password,#user,#password1{
+  border-top: 1px solid #e8e8e8;
+}
+#button
+{
+    height: 60px;
+    width: 100%;
+    background: #0f88eb;
+    box-shadow: none;
+    margin-top: 18px;
+    border: 0;
+    border-radius: 3px;
+    line-height: 41px;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Microsoft Yahei';
+}
+#button:hover{
+  background: #80c3f7;
+}
+#button p
+{
+  padding-top: 8px;
+font-family:'Microsoft YaHei';
+font-size: 30px;
+text-align: center;
+margin:0 auto;
+}
+input
+{
+  font-size:20px;
+  padding: 1em .8em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: 'Microsoft Yahei';
+    color: #666;
+    position: relative;
+}
