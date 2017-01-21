@@ -5,17 +5,20 @@ html,body{
   color: #555;
   line-height: 1.7;
 background-color: beige;
+background:url("../ima/background.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size:1600px 800px;
 }
 .login a{
-  color: grey;
+  color: white;
 }
 .registered a{
-  color: blue;
+  color: #f2c904;
 }
 .registered,a.active
 {
-  border-bottom: 2px solid blue;
-  color: blue;
+  border-bottom: 2px solid #f2c904;
 }
 
 .blog
@@ -24,7 +27,7 @@ background-color: beige;
   font-size: 60px;
    text-align: center;
    padding-top: 60px;
-
+   color: white;
 }
 .header
 {
@@ -37,19 +40,18 @@ background-color: beige;
 {
   font-family:'Microsoft YaHei';
   font-size: 28px;
-
   float: left;
-    text-align: center;
-    margin-left: 40px;
+  text-align: center;
+  margin-left: 40px;
 }
 .login
 {
   font-family:'Microsoft YaHei';
   font-size: 28px;
-
+  color: white;
   float: left;
-    text-align: center;
-      margin-left: 104px;
+  text-align: center;
+  margin-left: 104px;
 }
 
 .container
@@ -76,7 +78,7 @@ background-color: beige;
 }
 .form
 {
-    text-align: left;;
+    text-align: left;
     border: 1px solid #e8e8e8;
 }
 #password,#user,#password1{
@@ -90,35 +92,29 @@ background-color: beige;
     box-shadow: none;
     margin-top: 18px;
     border: 0;
-    border-radius: 3px;
+    border-radius: 10px;
     line-height: 41px;
     color: #fff;
     display: block;
-    font-size: 15px;
+    font-size: 26px;
     cursor: pointer;
     font-family: 'Microsoft Yahei';
 }
 #button:hover{
   background: #80c3f7;
 }
-#button p
-{
-  padding-top: 8px;
-font-family:'Microsoft YaHei';
-font-size: 30px;
-text-align: center;
-margin:0 auto;
-}
+
 input
 {
-  font-size:20px;
-  padding: 1em .8em;
+    font-size:20px;
+    padding: 1em .8em;
     width: 100%;
     box-sizing: border-box;
     border: 0;
     border-radius: 0;
     box-shadow: none;
     font-family: 'Microsoft Yahei';
-    color: #666;
+    color: white;
     position: relative;
+    background: transparent;
 }
