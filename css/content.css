@@ -1,0 +1,271 @@
+
+.FE , .PHP , .JAVA , .Unity
+{
+  content: "";
+  display: block;
+  clear: both;
+}
+.FE h1
+{
+
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top:10px;
+  letter-spacing: 10px;
+}
+h2
+{
+  color: white;
+}
+
+.FE
+{
+  height: 1000px;
+  background: #1b192f;
+}
+
+.FE .container
+{
+  width: 60%;
+  height: 100%;
+}
+
+.FE .container .CSS3
+{
+  padding: 10px;
+  width: 100%;
+  height: 26%;
+}
+
+.FE .container .CSS3 .ima-CSS3
+{
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.FE .container .CSS3 .ima-CSS3 img
+{
+  width: 100%;
+  height: 100%;
+}
+.FE .container .CSS3 .text-CSS3
+{
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  padding: 30px;
+  width: 50%;
+  height: 26%;
+}
+
+
+
+.FE .container .HTML5
+{
+  padding: 10px;
+  width: 100%;
+  height: 26%;
+}
+.FE .container .HTML5 .ima-HTML5
+{
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.FE .container .HTML5 .text-HTML5
+{
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  padding: 30px;
+  width: 50%;
+  height: 26%;
+}
+.FE .container .HTML5 .ima-HTML5 img
+{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+.FE .container .javascript
+{
+  padding: 10px;
+  width: 100%;
+  height: 26%;
+}
+.FE .container .javascript .ima-javascript
+{
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.FE .container .javascript .text-javascript
+{
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  padding: 30px;
+  width: 50%;
+  height: 26%;
+}
+.FE .container .javascript .ima-javascript img
+{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+.PHP
+{
+  height: 400px;
+  background: #25273f;
+
+}
+.PHP .ima-PHP
+{
+  width: 25%;
+  height: 80%;
+  float: left;
+}
+
+.PHP .text-PHP
+{
+  position: relative;;
+  height: 100%;
+  width: 55%;
+  float: left;;
+
+}
+
+.PHP  .text-PHP h2
+{
+  margin-top: 46px;
+  font-size: 30px;
+  color: white;
+  margin-left: 40px;
+}
+
+.PHP  .text-PHP p
+{
+  color: white;
+  letter-spacing: 1px;
+}
+
+.PHP  .ima-PHP img
+{
+  margin: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+.JAVA
+{
+  height: 400px;
+  background: #221050;
+}
+
+.JAVA .ima-JAVA
+{
+  margin: 40px;
+  width: 25%;
+  height: 80%;
+  float: right;
+}
+
+.JAVA .text-JAVA
+{
+
+  position: relative;
+  height: 100%;
+  width: 35%;
+  float: right;
+  margin-left: 60px;
+}
+
+.JAVA  .text-JAVA h2
+{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+.JAVA  .text-JAVA p
+{
+  color: white;
+  letter-spacing: 1px;
+}
+
+.JAVA  .ima-JAVA img
+{
+
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+
+.Unity
+{
+  height: 400px;
+  background: #393c58;
+
+}
+.Unity .ima-Unity
+{
+  width: 25%;
+  height: 80%;
+  float: left;
+}
+
+.Unity .text-Unity
+{
+  position: relative;
+  height: 400px;
+  width: 55%;
+  float: left;
+
+}
+
+.Unity  .text-Unity h2
+{
+  margin-top: 60px;
+  font-size: 30px;
+  color: white;
+  margin-left: 60px;
+}
+
+.Unity .text-Unity p
+{
+  color: white;
+  letter-spacing: 1px;
+}
+
+.Unity  .ima-Unity img
+{
+  margin: 40px;
+  height: 100%;
+  width: 100%;
+}

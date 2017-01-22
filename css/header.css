@@ -1,0 +1,110 @@
+.main-wrapper
+{
+  width: 100%;
+  height: 500px;
+  background: url("../ima/background4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+
+nav
+{
+  height: 50px;
+ background: transparent;
+
+}
+
+nav .logo
+{
+  margin-left: 20px;
+  line-height: 50px;
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+
+}
+
+nav .logo a
+{
+  font-size: 24px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+nav ul
+{
+
+  height: 50px;
+  float: right;
+  padding-right:20px;
+
+}
+
+nav ul li
+{
+   display: inline-block;
+   margin: 2px;
+}
+
+nav ul li a
+{
+  line-height: 50px;
+  font-size: 16px;
+  color: white;
+}
+
+nav ul li a:hover
+{
+  color: #ffe322;
+}
+
+#banner
+{
+
+  height: 380px;
+  background: transparent;
+}
+
+ #banner .inner
+ {
+
+   padding-top: 90px;
+   margin: 0 auto;
+   max-width: 600px;
+   text-align: center;
+ }
+
+ #banner .inner h1
+ {
+   padding-top: 20px;
+   letter-spacing: 2px;
+   font-size: 45px;
+
+ }
+
+ #banner .inner p
+ {
+   letter-spacing: 1px;
+   font-size: 20px;
+ }
+
+#banner .inner ul
+{
+  padding-top:130px;
+}
+#banner .inner ul li
+{
+  display: inline-block;
+  margin: 30px;
+  margin-top: 18px;
+}
+
+#banner .inner ul li a
+{
+  letter-spacing: 4px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
