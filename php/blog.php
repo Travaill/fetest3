@@ -40,64 +40,55 @@
 	<?php
 	$conn=mysqli_connect("localhost","root","123","blog");
 	if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
-	$sql="SELECT * FROM article WHERE type='FE' ";
+	$sql1="SELECT * FROM article WHERE type='FE' ";
 	mysqli_select_db($conn,"blog");
-	$retval=mysqli_query($conn,$sql);
-	while($row=mysqli_fetch_array($retval,MYSQLI_BOTH))	
+	$retval1=mysqli_query($conn,$sql1);
+	while($row=mysqli_fetch_array($retval1,MYSQLI_BOTH))	
 	{	
 		echo"{$row['title']}.<br>";
 	}
-	mysqli_free_result($conn,$retval);
-	mysqli_close($conn);
+	mysqli_free_result($retval1);
 	?>
    <div class="CSS3">
      <div class="ima-CSS3"><img src="ima/CSS3.jpg" alt="banner"></div>
      <div class="text-CSS3"><h2>CSS3</h2><p></p></div>
 	 <?php
-	$conn=mysqli_connect("localhost","root","123","blog");
-	if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
-	$sql="SELECT * FROM article WHERE type='CSS3' ";
+	$sql2="SELECT * FROM article WHERE type='CSS3' ";
 	mysqli_select_db($conn,"blog");
-	$retval=mysqli_query($conn,$sql);
-	while($row=mysqli_fetch_array($retval,MYSQLI_BOTH))	
+	$retval2=mysqli_query($conn,$sql2);
+	while($row=mysqli_fetch_array($retval2,MYSQLI_BOTH))	
 	{	
 		echo"{$row['title']}.<br>";
 	}
-	mysqli_free_result($conn,$retval);
-	mysqli_close($conn);
+	mysqli_free_result($retval2);
 	?>
    </div>
    <div class="HTML5">
      <div class="text-HTML5"><h2>HTML5</h2></div>
      <div class="ima-HTML5"><img src="ima/HTML5.jpg" alt="banner"></div>
 	 <?php
-	$conn=mysqli_connect("localhost","root","123","blog");
-	if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
-	$sql="SELECT * FROM article WHERE type='HTML5' ";
+	$sql3="SELECT * FROM article WHERE type='HTML5' ";
 	mysqli_select_db($conn,"blog");
-	$retval=mysqli_query($conn,$sql);
-	while($row=mysqli_fetch_array($retval,MYSQLI_BOTH))	
+	$retval3=mysqli_query($conn,$sql3);
+	while($row=mysqli_fetch_array($retval3,MYSQLI_BOTH))	
 	{	
 		echo"{$row['title']}.<br>";
 	}
-	mysqli_free_result($conn,$retval);
-	mysqli_close($conn);
+	mysqli_free_result($retval3);
 	?>
    </div>
    <div class="javascript">
      <div class="ima-javascript"><img src="ima/javascript.jpg" alt="banner"></div>
      <div class="text-javascript"><h2>javascript</h2><p></p></div>
 	 <?php
-	$conn=mysqli_connect("localhost","root","123","blog");
-	if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
-	$sql="SELECT * FROM article WHERE type='javascript' ";
+	$sql4="SELECT * FROM article WHERE type='javascript' ";
 	mysqli_select_db($conn,"blog");
-	$retval=mysqli_query($conn,$sql);
-	while($row=mysqli_fetch_array($retval,MYSQLI_BOTH))	
+	$retval4=mysqli_query($conn,$sql4);
+	while($row=mysqli_fetch_array($retval4,MYSQLI_BOTH))	
 	{	
 		echo"{$row['title']}.<br>";
 	}
-	mysqli_free_result($conn,$retval);
+	mysqli_free_result($retval4);
 	mysqli_close($conn);
 	?>
    </div>
