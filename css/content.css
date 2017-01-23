@@ -25,10 +25,24 @@ h2
   background: #1b192f;
 }
 
+.FE .article-title-CSS3
+{
+  position: relative;
+  float: left;;
+  width: 30%;
+  height: 90%;
+  padding-left: 30px;
+}
+.FE .article-title-CSS3 a{
+  font-size: 20px;
+  color: white;
+}
 .FE .container
 {
   width: 60%;
-  height: 100%;
+  height: 90%;
+  border-right: 1px solid orange;
+  float: left;
 }
 
 .FE .container .CSS3
@@ -75,6 +89,7 @@ h2
   width: 50%;
   height: 100%;
   float: left;
+
 }
 .FE .container .HTML5 .text-HTML5
 {
@@ -181,7 +196,7 @@ h2
 .JAVA
 {
   height: 400px;
-  background: #221050;
+  background: #2c2f4f;
 }
 
 .JAVA .ima-JAVA

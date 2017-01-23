@@ -1,0 +1,87 @@
+.wrapper
+{
+  width: 100%;
+  height: 820px;
+  background: url("../ima/background4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.content
+{
+  background-color:#000000;
+  opacity:0.8;
+  -moz-opacity:0.9;
+  filter:alpha(opacity=50);
+  text-align: center;
+  margin: 0 auto;
+}
+.content .container
+{
+  width: 50%;
+  margin: 0 auto;
+}
+.content .title
+{
+  width: 60%;
+  margin: 20px;
+  font-size: 30px;
+  float: left;
+}
+.content .title input
+{
+  width: 100%;
+}
+.content .title-area h1
+{
+  letter-spacing: 2px;
+  margin-left: 20px;
+  text-align: left;
+  color: white;
+}
+.content .article-area textarea
+{
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.content .checkbox-area
+{
+  color: white;
+  margin-top: 20px;
+}
+
+.content .checkbox-area h2
+{
+    margin-left: 20px;
+   text-align: left;
+   letter-spacing: 1px;
+}
+.content .checkbox-area  input
+{
+  text-align: left;
+  margin: 10px;
+
+}
+.content .checkbox-area  label
+{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.content .button-area input
+{
+  margin: 20px;
+  font-size: 20px;
+}
+
+footer
+{
+  height: 140px;
+  background:#353a48;
+  text-align: center;
+}
+
+footer p
+{
+  padding: 60px;
+}

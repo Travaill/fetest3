@@ -105,5 +105,8 @@ input
     font-family: 'Microsoft Yahei';
     color: white;
     position: relative;
-    background: transparent;
+    background-color:#000000;
+    opacity:0.5;
+    -moz-opacity:0.5;
+    filter:alpha(opacity=50);
 }
