@@ -1,17 +1,24 @@
 .wrapper
 {
   width: 100%;
-  height: 820px;
-  background: url("../ima/background4.jpg");
+  height: 100%;
+  background: url("../ima/421480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
 }
+.wrapper nav
+{
+  background-color:#000000;
+  opacity:0.6;
+  -moz-opacity:0.6;
+  filter:alpha(opacity=50);
+}
 .content
 {
   background-color:#000000;
-  opacity:0.8;
-  -moz-opacity:0.9;
+  opacity:0.6;
+  -moz-opacity:0.6;
   filter:alpha(opacity=50);
   text-align: center;
   margin: 0 auto;
@@ -24,7 +31,7 @@
 .content .title
 {
   width: 60%;
-  margin: 20px;
+  margin: 17px 0;
   font-size: 30px;
   float: left;
 }
@@ -35,7 +42,6 @@
 .content .title-area h1
 {
   letter-spacing: 2px;
-  margin-left: 20px;
   text-align: left;
   color: white;
 }
@@ -61,7 +67,8 @@
 {
   text-align: left;
   margin: 10px;
-
+  width: 16px;
+  height: 16px;
 }
 .content .checkbox-area  label
 {
@@ -72,16 +79,4 @@
 {
   margin: 20px;
   font-size: 20px;
-}
-
-footer
-{
-  height: 140px;
-  background:#353a48;
-  text-align: center;
-}
-
-footer p
-{
-  padding: 60px;
 }
