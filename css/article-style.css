@@ -1,13 +1,9 @@
-body
-{
-  background: #e6dbd5;
-}
 header
 {
-  background: #e5d4c9;;
-  height: 120px;
+  position: fixed;
   width: 100%;
 }
+
 nav
 {
   width: 100%;
@@ -16,7 +12,6 @@ nav
   opacity:0.5;
   -moz-opacity:0.5;
   filter:alpha(opacity=50);
-  position: fixed;
 
 }
 
@@ -27,7 +22,6 @@ nav .logo
   display: inline-block;
   float: left;
   font-weight: bold;
-
 }
 
 nav .logo a
@@ -63,25 +57,71 @@ nav ul li a:hover
 {
   color: #ffe322;
 }
-header h1
+
+.content h1
 {
-  padding-top: 70px;
-  text-align: center;
+
 }
+
+
+
+
+
 
 .content
 {
-  height: 800px;
-  margin: 0 auto;
-  max-width: 1080px;
-  border: 1px solid black;
-  border-radius: 20px;
+    background: url("../ima/1193629.jpg");
+    background-position: center;
+}
+
+.content .article-title
+{
+  width:210px;
+  float: left;
+  margin-left: 50px;
+  border: 2px solid#5aa5eb;
+  border-radius: 12px;
+  background: #89b6e2;
+  opacity:0.9;
+}
+
+.content .article-title h1
+{
+  font-size: 26px;
+  padding-left: 14px;
+  background: #5aa5eb;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 2px;
+}
+.content .article-title ul
+{
+  list-style: none;
+}
+.content .article-title ul li
+{
+  margin-left: 10px;
+  padding: 8px;
+  font-size: 18px;
+}
+.content .article-title ul li a
+{
+  color: white;
+}
+.content .article-title ul li a:hover
+{
+  color: #ff3535;
 }
 
 
 
 .content .article-area
 {
+
+  height: 800px;
+  max-width: 860px;
+  border: 1px solid black;
+  border-radius: 20px;
   width: 90%;
   margin: 0 auto;
 
@@ -90,8 +130,9 @@ header h1
 
 .content .article-area p
 {
+  margin: 0 auto;
   margin: 10 auto;
-  width: 100%;
+  width: 90%;
   padding: 10px;
 
 }
@@ -134,12 +175,12 @@ ul.pagination li a:hover:not(.active)
 
 footer
 {
-  height: 120px;
-  background:#f4ecea;
+  height: 80px;
+  background:#f4f7f8;
   text-align: center;
 }
 
 footer p
 {
-  line-height: 120px;
+  line-height: 80px;
 }

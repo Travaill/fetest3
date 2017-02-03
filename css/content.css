@@ -23,7 +23,7 @@ h2
 .FE
 {
   height: 850px;
-  background: #1b192f;
+  background: #282828;
 }
 
 .FE .article-title-FE
@@ -33,6 +33,10 @@ h2
   width: 34%;
   height: 90%;
   padding-left: 30px;
+  background: url("../ima/190613.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .FE .article-title-FE h2
 {
