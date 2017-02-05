@@ -1,18 +1,25 @@
+body
+{
+  background: url("../ima/1193629.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 header
 {
-  position: fixed;
   width: 100%;
 }
 
 nav
 {
+  position: fixed;
   width: 100%;
   height: 50px;
   background-color:#000000;
   opacity:0.5;
   -moz-opacity:0.5;
   filter:alpha(opacity=50);
-
 }
 
 nav .logo
@@ -57,32 +64,37 @@ nav ul li a:hover
 {
   color: #ffe322;
 }
-
-.content h1
+header h1
 {
-
+  padding-top: 60px;
+  width: 1280px;
+  margin: 0 auto;
+  font-size: 42px;
+  letter-spacing: 4px;
 }
-
-
+header h2
+{
+  width: 1280px;
+  margin: 0 auto;
+  letter-spacing: 2px;
+}
 
 
 
 
 .content
 {
-    background: url("../ima/1193629.jpg");
-    background-position: center;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .content .article-title
 {
-  width:210px;
-  float: left;
-  margin-left: 50px;
-  border: 2px solid#5aa5eb;
-  border-radius: 12px;
-  background: #89b6e2;
-  opacity:0.9;
+  margin-top: 56px;
+  margin-right: 160px;
+  width:240px;
+  float: right;
+  border: 1px solid grey;
 }
 
 .content .article-title h1
@@ -90,7 +102,6 @@ nav ul li a:hover
   font-size: 26px;
   padding-left: 14px;
   background: #5aa5eb;
-  border-radius: 10px;
   color: white;
   letter-spacing: 2px;
 }
@@ -102,11 +113,12 @@ nav ul li a:hover
 {
   margin-left: 10px;
   padding: 8px;
-  font-size: 18px;
+  font-size: 20px;
 }
 .content .article-title ul li a
 {
-  color: white;
+  color: black;
+  letter-spacing: 2px;
 }
 .content .article-title ul li a:hover
 {
@@ -117,47 +129,49 @@ nav ul li a:hover
 
 .content .article-area
 {
-
-  height: 800px;
-  max-width: 860px;
-  border: 1px solid black;
-  border-radius: 20px;
-  width: 90%;
-  margin: 0 auto;
+  margin: 20px 0 ;
 
 }
 
-
+.content .article-area .text
+{
+  height: 800px;
+}
 .content .article-area p
 {
-  margin: 0 auto;
-  margin: 10 auto;
+  max-width: 860px;
   width: 90%;
-  padding: 10px;
-
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 6px;
+  text-indent: 2em;
 }
 .pagination-area
 {
-  text-align: center;
+  text-align: left;;
   padding: 10px;
+  margin-left: 170px;
 }
-ul.pagination {
+ul.pagination
+{
     display: inline-block;
-    padding: 0;
-    margin: 0;
 }
 
-ul.pagination li {display: inline;}
+ul.pagination li
+{
+  display: inline;
+}
 
 ul.pagination li a {
-    color: black;
+    color: white  ;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
     margin: 0 4px;
     text-align: center;
-    font-size: 22px;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 ul.pagination li a.active {
@@ -173,6 +187,18 @@ ul.pagination li a:hover:not(.active)
   border-radius: 5px;
 }
 
+.article-area .article-imformation
+{
+  border-bottom: 2px solid grey;
+  width: 1280px;
+}
+.article-area .article-imformation span
+{
+  font-size: 16px;
+  margin: 0 5px;
+  letter-spacing: 2px;
+  line-height: 32px;
+}
 footer
 {
   height: 80px;
