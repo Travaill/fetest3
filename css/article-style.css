@@ -6,11 +6,6 @@ body
   background-size: cover;
 }
 
-header
-{
-  width: 100%;
-}
-
 nav
 {
   position: fixed;
@@ -64,28 +59,103 @@ nav ul li a:hover
 {
   color: #ffe322;
 }
-header h1
+
+
+header
 {
   padding-top: 60px;
+  height: 60px;
   width: 1280px;
   margin: 0 auto;
+}
+header h1
+{
+
+  width: 400px;
   font-size: 42px;
   letter-spacing: 4px;
+  float: left;
 }
-header h2
+
+.form-wrapper
 {
-  width: 1280px;
-  margin: 0 auto;
-  letter-spacing: 2px;
+  width:300px;
+  padding:10px;
+  margin-top: 50px;
+  background: #444;
+  background:rgba(0,0,0,.2);
+  border-radius:10px;
+  box-shadow:0 1px 1px rgba(0,0,0,.4)inset,0 1px 0 rgba(255,255,255,.2);
+  margin:0 auto;
+  float: right;
 }
 
+.form-wrapper input
+{
+  width:200px;
+  height:10px;
+  padding:10px 5px;
+  float:left;
+  font:bold 60px 'lucida sans','trebuchet MS'，'Tahoma';
+  border:0;
+  background:#eee;
+  border-radius:3px 0 0 3px;
+  font-size: 20px;
+}
 
+.form-wrapper input:focus
+{
+  outline: 0;
+  background: #fff;
+  box-shadow:0 0 2px rgba(0,0,0,.8)inset;
+}
 
+.form-wrapper button
+{
+  overflow:visible;
+  position:relative;
+  float:right;
+  border:0;
+  padding:0;
+  cursor:pointer;
+  height:30px;
+  width:90px;
+  font:bold 15px/32px 'lucida sans', 'trebuchet MS','Tahoma';
+  color: #fff;
+  text-transform:uppercase;
+  background:#d83c3c;
+  border-radius:0 3px 3px 0;
+  text-shadow:0 -1px 0 rgba(0, 0 ,0,.3);
+  font-size: 18px;
+
+}
+
+.form-wrapper button:hover
+{
+ background:#e54040;
+}
+
+.form-wrapper button:before
+{ /* left arrow */
+ content:'';
+ position:absolute;
+ border-width:8px 8px 8px 0;
+ border-style:solid solid solid none;
+ border-color: transparent #d83c3c transparent;
+ top:10px;
+ left:-8px;
+}
+
+.form-wrapper button:hover:before
+{
+ border-right-color:#e54040;
+}
 
 .content
 {
   max-width: 1280px;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .content .article-title
@@ -162,8 +232,9 @@ ul.pagination li
   display: inline;
 }
 
-ul.pagination li a {
-    color: white  ;
+ul.pagination li a
+{
+    color: white;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -174,7 +245,8 @@ ul.pagination li a {
     font-weight: bold;
 }
 
-ul.pagination li a.active {
+ul.pagination li a.active
+{
     background-color: #dc3838;
     color: white;
     border: 1px solid  #dc3838;

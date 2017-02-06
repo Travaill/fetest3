@@ -7,23 +7,25 @@
 <link href="css/article-style.css" rel="stylesheet"/>
 </head>
 <body>
-<header>
-
   <nav>
   <div class="logo"><a href="logined-blog.html">BLOG</a></div>
   <ul>
     <li><a href="blog.html" class="active">首页</a></li>
-     <li><a href="commit.html">发布文章</a></li>
-      <li><a href="Modify.html">修改文章</a></li>
+    <li><a href="commit.html">发布文章</a></li>
+    <li><a href="Modify.html">修改文章</a></li>
     <li><a href="#">联系我们</a></li>
   </ul>
   </nav>
+<header>
   <h1>BLOG</h1>
-  <h2>You can find everything here</h2>
+  <form class="form-wrapper">
+  <input type="text" placeholder="Search here..." required>
+  <button type="submit">Search</button>
+ </form>
 </header>
 <div class="content">
-    <h1 style="margin-top: 40px;font-size:38px;">前端工程师如何与设计师合作？</h1>
-  <div class="article-title">
+    <h1 style="font-size:38px;">前端工程师如何与设计师合作？</h1>
+    <div class="article-title">
     <h1>FE</h1>
     <ul>
       <li><a href="#">CSS：Grid布局</a></li>
@@ -59,8 +61,8 @@
   </div>
   <div class="text">
   <p>如果你是前端，你可以给设计师提以下一些要求：</p>
- <p>1.如果想要95%以上还原设计稿，你必须提供给设计师设计时的注意事项，当然如果设计师有前端功底，他的设计会考虑到更多的协作性，通俗点说：比如设计的PSD稿件的图层切图的形状不要太另类，不同的分辨率，元素布局上你能不能敲代码实现，容不容易做出来，不要太自我主义不考虑前端，到时候做出来的东西又返回头改死人，甚至前端出来后一塌糊涂，两败俱伤</p>
- <p>2.你看过的或者项目交互上想要的效果，让设计师分析这种效果拆分后该设计些什么东西？设计量有多少？能不能用图形的方式直观的设计出来？等等</p>
+  <p>1.如果想要95%以上还原设计稿，你必须提供给设计师设计时的注意事项，当然如果设计师有前端功底，他的设计会考虑到更多的协作性，通俗点说：比如设计的PSD稿件的图层切图的形状不要太另类，不同的分辨率，元素布局上你能不能敲代码实现，容不容易做出来，不要太自我主义不考虑前端，到时候做出来的东西又返回头改死人，甚至前端出来后一塌糊涂，两败俱伤</p>
+  <p>2.你看过的或者项目交互上想要的效果，让设计师分析这种效果拆分后该设计些什么东西？设计量有多少？能不能用图形的方式直观的设计出来？等等</p>
   </div>
   <div class="pagination-area">
   <ul class="pagination">

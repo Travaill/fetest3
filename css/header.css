@@ -45,7 +45,7 @@ nav ul
 nav ul li
 {
    display: inline-block;
-   margin: 2px;
+   margin: 2px;f
 }
 
 nav ul li a
@@ -144,7 +144,7 @@ nav ul li a:hover
 
 .form-wrapper button:hover
 {
-background:#e54040;
+ background:#e54040;
 }
 
 .form-wrapper button:before
@@ -160,7 +160,5 @@ background:#e54040;
 
 .form-wrapper button:hover:before
 {
-
-border-right-color:#e54040;
-
+ border-right-color:#e54040;
 }
