@@ -86,7 +86,7 @@
 	$retval4=mysqli_query($conn,$sql4);
 	while($row=mysqli_fetch_array($retval4,MYSQLI_BOTH))	
 	{	
-		echo"{$row['title']}.<br>";
+		echo"<a href='article.php'>{$row['title']}.</a><br>";
 	}
 	mysqli_free_result($retval4);
 	mysqli_close($conn);
