@@ -8,7 +8,7 @@
 </head>
 <body>
   <nav>
-  <div class="logo"><a href="logined-blog.html">BLOG</a></div>
+  <div class="logo"><a href="logined-blog.php">BLOG</a></div>
   <ul>
     <li><a href="blog.html" class="active">首页</a></li>
     <li><a href="commit.html">发布文章</a></li>

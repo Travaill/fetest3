@@ -14,8 +14,8 @@
  <nav>
    <div class="logo"><a href="blog.html">BLOG</a></div>
    <ul>
-     <li><a href="logined-blog.html" class="active">首页</a></li>
-     <li><a href="unlogined-blog.html">注销</a></li>
+     <li><a href="logined-blog.php" class="active">首页</a></li>
+     <li><a href="unlogined-blog.php">注销</a></li>
      <li><a href="commit.html">发布文章</a></li>
      <li><a href="#">联系我们</a></li>
    </ul>

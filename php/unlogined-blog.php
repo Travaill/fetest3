@@ -14,7 +14,7 @@
  <nav>
    <div class="logo"><a href="blog.html">BLOG</a></div>
    <ul>
-     <li><a href="unlogined-blog.html" class="active">首页</a></li>
+     <li><a href="unlogined-blog.php" class="active">首页</a></li>
      <li><a href="login.html">登录</a></li>
      <li><a href="registered.html">注册</a></li>
      <li><a href="#">联系我们</a></li>
