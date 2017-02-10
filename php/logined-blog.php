@@ -14,9 +14,15 @@
  <nav>
    <div class="logo"><a href="blog.html">BLOG</a></div>
    <ul>
-     <li><a href="logined-blog.php" class="active">首页</a></li>
-     <li><a href="unlogined-blog.php">注销</a></li>
-     <li><a href="commit.html">发布文章</a></li>
+     <li><p>欢迎你:</p><li>
+     <?php echo"<li><a>{$_COOKIE['name']}</a></li>";?>
+	 <li><a href="logined-blog.php" class="active">首页</a></li>
+     <li><a href="logout.php">注销</a></li>
+     <?php
+	 if($_COOKIE['auth']==0)
+	 {
+		echo "<li><a href='commit1.php'>发布文章</a></li>";
+	 }?>
      <li><a href="#">联系我们</a></li>
    </ul>
  </nav>

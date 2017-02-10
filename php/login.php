@@ -15,9 +15,9 @@
 		{
 			setcookie("name",$id,time()+3600*24*365);
 			setcookie("password",$pass,time()+3600*24*365);
+			setcookie("auth",$row['auth'],time()+3600*24*365);
 			echo"<script>alert('登录成功')</script>";
-			if($row['auth']==1) {echo"<script>location.href='logined-blog.php';</script>";}
-			if($row['auth']==0) {echo"<script>location.href='logined-blog.php';</script>";}
+			echo"<script>location.href='logined-blog.php';</script>";
 		}
 		else 
 			{
