@@ -1,0 +1,38 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  font-family:'Microsoft YaHei';
+  color: #555;
+  line-height: 1.7;
+  background:url("../ima/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:1600px 800px;
+}
+
+header .blog
+{
+  height: 196px;
+  font-size: 60px;
+   text-align: center;
+   padding-top: 60px;
+   color: white;
+}
+
+.container
+{
+  height: 250px;
+  width: 600px;
+  margin: 0 auto;
+  background: black;
+  opacity: 0.6;
+}
+
+ .container a
+ {
+   color: white;
+   font-size: 20px;
+   letter-spacing: 1px;
+   text-align: center;
+   line-height: 210px;
+ }
