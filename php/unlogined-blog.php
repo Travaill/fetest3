@@ -67,7 +67,7 @@
 					$retval=mysqli_query($conn,$sql);
 					while($row=mysqli_fetch_array($retval,MYSQLI_BOTH))	
 					{	
-						echo"<a href='article-style.php?id={$row['id']}&p=1'>{$row['title']}.</a><br>";
+						echo"<a href='article_unlogined.php?id={$row['id']}&p=1'>{$row['title']}.</a><br>";
 					}
 					mysqli_free_result($retval);
 					mysqli_close($conn);

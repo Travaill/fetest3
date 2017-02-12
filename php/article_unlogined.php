@@ -10,15 +10,10 @@
   <nav>
   <div class="logo"><a href="logined-blog.php">BLOG</a></div>
   <ul><?php
-		echo "<li><p>欢迎你:</p><li>".
-		"<li><a>{$_COOKIE['name']}</a></li>".
-		"<li><a href='logined-blog.php' class='active'>首页</a></li>";   
-		if($_COOKIE['auth']==0)
-		{
-			echo"<li><a href='commit1.php'>发布文章</a></li>".
-			"<li><a href='Modify.php?id={$_GET['id']}'>.修改文章.</a></li>";
-		}
-		echo "<li><a href='#'>联系我们</a></li>";?>
+		echo "<li><a href='unlogined-blog.php' class='active'>首页</a></li>".
+			 "<li><a href='login.html'>登录</a></li>".			 
+			 "<li><a href='registered.html'>注册</a></li>".
+			 "<li><a href='#'>联系我们</a></li>";?>
 	</ul>
   </nav>
 <header>
@@ -54,7 +49,7 @@
 			$retval=mysqli_query($conn,$sql);
 			while($row=mysqli_fetch_array($retval,MYSQLI_BOTH))	
 			{	
-				echo"<a href='article-style.php?id={$row['id']}&p=1'>{$row['title']}.</a><br>";
+				echo"<a href='article_unlogined.php?id={$row['id']}&p=1'>{$row['title']}.</a><br>";
 			}
 			mysqli_free_result($retval);
 			mysqli_close($conn);
@@ -119,17 +114,17 @@
 			$end=$pages;
 			if($page>1)
 			{
-				$page_banner.="<a href=".'article-style.php'."?id=$id"."&p=1".">首页</a>";
-				$page_banner.="<a href=".'article-style.php'."?id=$id"."&p=".($page-1)."><<</a>";
+				$page_banner.="<a href=".'article_unlogined.php'."?id=$id"."&p=1".">首页</a>";
+				$page_banner.="<a href=".'article_unlogined.php'."?id=$id"."&p=".($page-1)."><<</a>";
 			}
 			for($i=$start;$i<=$end;$i++)
 			{
-				$page_banner.="<a href=".'article-style.php'."?id=$id"."&p=".$i.">{$i}</a>";
+				$page_banner.="<a href=".'article_unlogined.php'."?id=$id"."&p=".$i.">{$i}</a>";
 			}
 			if($page<$pages)
 			{
-				$page_banner.="<a href=".'article-style.php'."?id=$id"."&p=".($page+1).">>></a>";
-				$page_banner.="<a href=".'article-style.php'."?id=$id"."&p=".($pages).">尾页</a>";
+				$page_banner.="<a href=".'article_unlogined.php'."?id=$id"."&p=".($page+1).">>></a>";
+				$page_banner.="<a href=".'article_unlogined.php'."?id=$id"."&p=".($pages).">尾页</a>";
 			}
 		}
 		echo $page_banner;
