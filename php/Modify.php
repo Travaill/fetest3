@@ -23,7 +23,7 @@
      </ul>
    </nav>
   </header>
-<?php echo"<form class='content' action='change.php?id={$_GET['id']}' method='post'>" ?>
+<?php echo"<form class='content' action='change.php?id={$_GET['id']}' method='post'>"; ?>
   <div class="container">
 <?php 
 	$conn=mysqli_connect("localhost","root","123","blog");
