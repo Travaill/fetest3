@@ -3,9 +3,27 @@
 	$title=addslashes($_POST['title']);
 	$content=addslashes($_POST['content']);
 	$type=$_POST['type'];
+	$tag=$_POST['tag'];
+	$tags=explode(" ",$tag);
+	$num=count($tags);
 	str_replace(" "," ",str_replace("\n","<br/>",$_POST['content']));
 	$conn=mysqli_connect("localhost","root","123","blog");
 	if($conn->error){die("连接失败:".$conn->conn_error);}
+	mysqli_query($conn,$sql="DELETE FROM tag WHERE title='$title'");
+	for($i=0;$i<$num;$i++)
+	{
+		$sql=" INSERT INTO tag(tag,title)
+		VALUES('$tags[$i]','$title')";
+		if($conn->query($sql)===TRUE)
+		{
+			echo" ";
+		}
+		else
+		{
+			echo"错误:",$conn->error;
+			$conn->close();
+		}	
+	}
 	$sql="UPDATE article SET title='$title',content='$content',type='$type' WHERE id=$id";
 	mysqli_select_db($conn,"blog");
 	$result=mysqli_query($conn,$sql);

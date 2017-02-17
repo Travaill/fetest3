@@ -10,16 +10,11 @@
   <nav>
   <div class="logo"><a href="logined-blog.html">BLOG</a></div>
   <ul>
-    <li><p>欢迎你:</p><li>
-     <?php echo"<li><a>{$_COOKIE['name']}</a></li>";?>
-	 <li><a href="logined-blog.php" class="active">首页</a></li>
-     <li><a href="logout.php">注销</a></li>
-     <?php
-	 if($_COOKIE['auth']==0)
-	 {
-		echo "<li><a href='commit1.php'>发布文章</a></li>";
-	 }?>
-     <li><a href="#">联系我们</a></li>
+    <?php
+		echo "<li><a href='unlogined-blog.php' class='active'>首页</a></li>".
+			 "<li><a href='login.html'>登录</a></li>".			 
+			 "<li><a href='registered.html'>注册</a></li>".
+			 "<li><a href='#'>联系我们</a></li>";?>
   </ul>
   </nav>
 <header>
@@ -39,7 +34,7 @@
 			$retval=mysqli_query($conn,$sql);
 			while($row=mysqli_fetch_array($retval,MYSQLI_BOTH))	
 			{	
-				echo"<a href='article-style.php?id={$row['id']}&p=1'>{$row['title']}.</a><br>";
+				echo"<a href='article_unlogined.php?id={$row['id']}&p=1'>{$row['title']}.</a><br>";
 			}
 			mysqli_free_result($retval);
 			mysqli_close($conn);
@@ -84,7 +79,7 @@
 		$total=mysqli_num_rows($result);
 		while($row=mysqli_fetch_array($result,MYSQLI_BOTH))
 		{
-			echo"<li><a href='article-style.php?id={$row['id']}&p=1'>{$row['title']}.</a></li><br>";
+			echo"<li><a href='article_unlogined.php?id={$row['id']}&p=1'>{$row['title']}.</a></li><br>";
 		}
 		if(mysqli_num_rows($result)==0)
 		{
@@ -104,17 +99,17 @@
 	$end=$pages;
 	if($page>1)
 	{
-		$page_banner.="<a href=".'search.php'."?p=1&search={$search}".">首页</a>";
-		$page_banner.="<a href=".'search.php'."?p=".($page-1)."&search={$search}><<</a>";
+		$page_banner.="<a href=".'search_unlogined.php'."?p=1&search={$search}".">首页</a>";
+		$page_banner.="<a href=".'search_unlogined.php'."?p=".($page-1)."&search={$search}><<</a>";
 	}
 	for($i=1;$i<=$pages;$i++)
 	{
-		$page_banner.="<a href='search.php?p={$i}&search={$search}'>{$i}</a>";
+		$page_banner.="<a href='search_unlogined.php?p={$i}&search={$search}'>{$i}</a>";
 	}
 	if($page<$pages)
 	{
-		$page_banner.="<a href=".'search.php'."?p=".($page+1)."&search={$search}>>></a>";
-		$page_banner.="<a href=".'search.php'."?p={$pages}&search={$search}".">尾页</a>";
+		$page_banner.="<a href=".'search_unlogined.php'."?p=".($page+1)."&search={$search}>>></a>";
+		$page_banner.="<a href=".'search_unlogined.php'."?p={$pages}&search={$search}".">尾页</a>";
 	}
 	echo $page_banner;
   ?></li>

@@ -30,7 +30,7 @@
    <div class="inner">
      <h1>Wecome to BLOG</h1>
      <p>You can find everything here.</p>
-     <form class="form-wrapper" action="search.php" method="post">
+     <form class="form-wrapper" action="search.php?p=1" method="post">
      <input type="text" placeholder="Search here..." name="search" required>
      <button type="submit">Search</button>
     </form>

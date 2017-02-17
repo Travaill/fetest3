@@ -38,16 +38,31 @@
 		$content=$row['content'];
 	}
 	mysqli_free_result($result);
+	$sql="SELECT * FROM tag WHERE title='$title'";
+	mysqli_select_db($conn,"blog");
+	$result=mysqli_query($conn,$sql);
+	$num=mysqli_num_rows($result);
+	$tag="";
+	$i=1;
+	while($row=mysqli_fetch_array($result,MYSQLI_BOTH))
+	{
+			$tag[$i]=$row['tag']." ";
+			$i++;
+	}
+	$tag=implode($tag);
+	mysqli_free_result($result);
 	mysqli_close($conn);
 ?>
   <div class="title-area">
     <h1>修改你的文章</h1>
- <?php   echo"<input type='text' name='title' id='title' class='title' maxlength='15' 
+ <?php   echo"<input type='text' name='title' id='title' class='title' maxlength='50' 
 	value='$title' required>"; ?>
   </div>
   <div class="article-area">
- <?php echo"<textarea cols='100' rows='17' name='content'  required >$content</textarea>"; ?>
+ <?php 
+	echo"<textarea cols='100' rows='17' name='content'  required >$content</textarea>"; ?>
   </div>
+ <?php echo"<input type='text' name='tag' id='label' class='label' maxlength='50'value='$tag' required>"; ?>
 <div class="checkbox-area">
   <h2>给你的文章分个类吧:</h2>
  <input type="checkbox" value="FE"  name="type" /><label for="checkbox1">FE</label>

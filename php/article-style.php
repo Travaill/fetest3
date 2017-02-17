@@ -23,7 +23,7 @@
   </nav>
 <header>
   <h1>BLOG</h1>
-  <form class="form-wrapper" action="search.php" method="post">
+  <form class="form-wrapper" action="search.php?p=1" method="post">
   <input type="text" placeholder="Search here..." name="search" required>
   <button type="submit">Search</button>
  </form>
@@ -83,7 +83,7 @@
       <span><?php $result=connect($id);
 	while($row=mysqli_fetch_array($result,MYSQLI_BOTH))
 	{
-		echo substr($row['reg_date'],0,10);
+		echo substr($row['reg_date'],0,16);
 	}
 	mysqli_free_result($result);
 ?></span>

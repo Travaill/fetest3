@@ -29,11 +29,12 @@
 
   <div class="title-area">
     <h1>发布你的文章</h1>
-    <input type="text" name="title" id="title" class="title" maxlength="25"placeholder="请输入文章标题" required>
+    <input type="text" name="title" id="title" class="title" maxlength="50"placeholder="请输入文章标题" required>
   </div>
   <div class="article-area">
     <textarea cols="100" rows="17" placeholder="请输入文章" name="content" required ></textarea>
   </div>
+      <input type="text" name="tag" id="label" class="label" maxlength="50"placeholder="填写标签" required>
 <div class="checkbox-area">
   <h2>给你的文章分个类吧:</h2>
  <input type="checkbox" value="FE"  name="type" /><label for="checkbox1">FE</label>

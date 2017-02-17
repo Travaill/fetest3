@@ -2,7 +2,9 @@
 	$type=$_POST['type'];
 	$title=$_POST['title'];
 	$content=$_POST['content'];
-//	$tag=$_POST['tag'];
+	$tag=$_POST['tag'];
+	$tags=explode(" ",$tag);
+	$num=count($tags);
 	if(empty($title)||empty($content))
 	{
 		echo "<script>alert('内容和标题不能为空！')</script>";
@@ -20,7 +22,32 @@
 	)";
 	if ($conn->query($sql) === TRUE){echo " ";} 
 	else {echo " ";}
-
+	
+	$sql="CREATE TABLE tag
+	(
+		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		tag VARCHAR(10) NOT NULL,
+		title VARCHAR(50) NOT NULL,
+		reg_date TIMESTAMP
+	)";
+	if ($conn->query($sql) === TRUE){echo " ";} 
+	else {echo " ";}
+	
+	for($i=0;$i<$num;$i++)
+	{
+		$sql=" INSERT INTO tag(tag,title)
+		VALUES('$tags[$i]','$title')";
+		if($conn->query($sql)===TRUE)
+		{
+			echo" ";
+		}
+		else
+		{
+			echo"错误:",$conn->error;
+			$conn->close();
+		}	
+	}
+	
 	$sql="INSERT INTO article(type,title,content)
 	VALUES('$type','$title','$content')";
 	if($conn->query($sql)===TRUE)
@@ -34,5 +61,4 @@
 		$conn->close();
 	}	
 	$conn->close();
-
 ?>

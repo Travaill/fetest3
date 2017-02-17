@@ -65,10 +65,10 @@
   </div>
   <div class="article-area">
   <div class="result">
-    <h2>您的搜索结果为:</h2>
-    <ul>
-    <?php
-		$search=isset($_POST['search']) ? $_POST['search'] : $_GET['search'];;
+ <?php
+		$tag=isset($_POST['tag']) ? $_POST['tag'] : $_GET['tag'];
+		echo "<h2>$tag:</h2>".
+		"<ul>";
 		$page=$_GET['p'];
 		if(!$page||$page<1)
 		{
@@ -78,17 +78,21 @@
 		$offset=($page-1)*$pagesize;
 		$conn=mysqli_connect("localhost","root","123","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
-		$sql="SELECT * FROM article WHERE title LIKE '%{$search}%' LIMIT $offset,$pagesize";
+		$sql="SELECT * FROM tag WHERE tag='$tag' LIMIT $offset,$pagesize";
 		mysqli_select_db($conn,"blog");
 		$result=mysqli_query($conn,$sql);
 		$total=mysqli_num_rows($result);
 		while($row=mysqli_fetch_array($result,MYSQLI_BOTH))
 		{
-			echo"<li><a href='article-style.php?id={$row['id']}&p=1'>{$row['title']}.</a></li><br>";
-		}
-		if(mysqli_num_rows($result)==0)
-		{
-			echo"<li>无记录！</li>";
+			$title=$row['title'];
+			$sql1="SELECT * FROM article WHERE title='$title'";
+			mysqli_select_db($conn,"blog");
+			$retval=mysqli_query($conn,$sql1);
+			if($rows=mysqli_fetch_array($retval,MYSQLI_BOTH))
+			{
+				echo"<li><a href='article-style.php?id={$rows['id']}&p=1'>{$title}.</a></li><br>";
+			}
+			mysqli_free_result($retval);
 		}
 		mysqli_free_result($result);
 		mysqli_close($conn);
@@ -104,17 +108,17 @@
 	$end=$pages;
 	if($page>1)
 	{
-		$page_banner.="<a href=".'search.php'."?p=1&search={$search}".">首页</a>";
-		$page_banner.="<a href=".'search.php'."?p=".($page-1)."&search={$search}><<</a>";
+		$page_banner.="<a href=".'tag_class.php'."?p=1&tag={$tag}".">首页</a>";
+		$page_banner.="<a href=".'tag_class.php'."?p=".($page-1)."&tag={$tag}><<</a>";
 	}
 	for($i=1;$i<=$pages;$i++)
 	{
-		$page_banner.="<a href='search.php?p={$i}&search={$search}'>{$i}</a>";
+		$page_banner.="<a href='tag_class.php?p={$i}&tag={$tag}'>{$i}</a>";
 	}
 	if($page<$pages)
 	{
-		$page_banner.="<a href=".'search.php'."?p=".($page+1)."&search={$search}>>></a>";
-		$page_banner.="<a href=".'search.php'."?p={$pages}&search={$search}".">尾页</a>";
+		$page_banner.="<a href=".'tag_class.php'."?p=".($page+1)."&tag={$tag}>>></a>";
+		$page_banner.="<a href=".'tag_class.php'."?p={$pages}&tag={$tag}".">尾页</a>";
 	}
 	echo $page_banner;
   ?></li>
