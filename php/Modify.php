@@ -26,7 +26,7 @@
 <?php echo"<form class='content' action='change.php?id={$_GET['id']}' method='post'>"; ?>
   <div class="container">
 <?php 
-	$conn=mysqli_connect("localhost","root","123","blog");
+	$conn=mysqli_connect("localhost","root","","blog");
 	$id=isset($_POST['id']) ? $_POST['id'] : $_GET['id'];
 	if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 	$sql="SELECT * FROM article WHERE id=$id";

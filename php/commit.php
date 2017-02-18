@@ -10,7 +10,7 @@
 		echo "<script>alert('内容和标题不能为空！')</script>";
 		echo"<script>location.href='registered.html';</script>";
 	}
-	$conn=mysqli_connect("localhost","root","123","blog");
+	$conn=mysqli_connect("localhost","root","","blog");
 	if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 	$sql="CREATE TABLE article
 	(

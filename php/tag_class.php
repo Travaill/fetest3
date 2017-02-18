@@ -33,7 +33,7 @@
     <h1 style="font-size:38px;"><?php
 	function ai($con)
 	{
-		$conn=mysqli_connect("localhost","root","123","blog");
+		$conn=mysqli_connect("localhost","root","","blog");
 		$sql="SELECT * FROM article WHERE type='$con' ";
 			mysqli_select_db($conn,"blog");
 			$retval=mysqli_query($conn,$sql);
@@ -76,7 +76,7 @@
 		}
 		$pagesize=10;
 		$offset=($page-1)*$pagesize;
-		$conn=mysqli_connect("localhost","root","123","blog");
+		$conn=mysqli_connect("localhost","root","","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 		$sql="SELECT * FROM tag WHERE tag='$tag' LIMIT $offset,$pagesize";
 		mysqli_select_db($conn,"blog");
