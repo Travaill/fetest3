@@ -1,7 +1,7 @@
 <?php
 	$id=$_POST['user'];
 	$pass=md5($_POST['password']);
-	$conn=new mysqli("localhost","root","123","blog");
+	$conn=new mysqli("localhost","root","","blog");
 	if($conn->connect_error)
 	{
 		$response="错误错误";

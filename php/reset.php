@@ -10,7 +10,7 @@
 	}
 	else
 	{	
-		$conn=mysqli_connect("localhost","root","123","blog");
+		$conn=mysqli_connect("localhost","root","","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 		$sql="UPDATE user SET password='$pass' WHERE name='$name'";
 		mysqli_select_db($conn,"blog");

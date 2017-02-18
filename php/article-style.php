@@ -33,7 +33,7 @@
 	$id=isset($_POST['id']) ? $_POST['id'] : $_GET['id'];
 	function connect($id)
 	{
-		$conn=mysqli_connect("localhost","root","123","blog");
+		$conn=mysqli_connect("localhost","root","","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 		$sql="SELECT * FROM article WHERE id=$id";
 		mysqli_select_db($conn,"blog");
@@ -49,7 +49,7 @@
 	mysqli_free_result($result);
 	function ai($con)
 	{
-		$conn=mysqli_connect("localhost","root","123","blog");
+		$conn=mysqli_connect("localhost","root","","blog");
 		$sql="SELECT * FROM article WHERE type='$con' ";
 			mysqli_select_db($conn,"blog");
 			$retval=mysqli_query($conn,$sql);
@@ -90,7 +90,7 @@
 ?></span>
 	<div class="label">
 	<?php	
-		$conn=mysqli_connect("localhost","root","123","blog");
+		$conn=mysqli_connect("localhost","root","","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 		$sql="SELECT * FROM tag WHERE title='$title'";//显示标签
 		mysqli_select_db($conn,"blog");

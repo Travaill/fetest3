@@ -67,7 +67,7 @@
          <li><?php
 				function ai($con)
 				{
-					$conn=mysqli_connect("localhost","root","123","blog");
+					$conn=mysqli_connect("localhost","root","","blog");
 					$sql="SELECT * FROM article WHERE type='$con' ";
 					mysqli_select_db($conn,"blog");
 					$retval=mysqli_query($conn,$sql);

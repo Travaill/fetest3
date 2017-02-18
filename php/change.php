@@ -7,7 +7,7 @@
 	$tags=explode(" ",$tag);
 	$num=count($tags);
 	str_replace(" "," ",str_replace("\n","<br/>",$_POST['content']));
-	$conn=mysqli_connect("localhost","root","123","blog");
+	$conn=mysqli_connect("localhost","root","","blog");
 	if($conn->error){die("连接失败:".$conn->conn_error);}
 	mysqli_query($conn,$sql="DELETE FROM tag WHERE title='$title'");
 	for($i=0;$i<$num;$i++)
