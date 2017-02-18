@@ -26,7 +26,7 @@
 <div class="content">
     <h1 style="font-size:38px;"><?php
 	$id=isset($_POST['id']) ? $_POST['id'] : $_GET['id'];
-	function connect($id)
+	function connect($id)//查询文章
 	{
 		$conn=mysqli_connect("localhost","root","123","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
@@ -36,12 +36,12 @@
 		return $result;
 	}
 	$result=connect($id);
-	while($row=mysqli_fetch_array($result,MYSQLI_BOTH))
+	while($row=mysqli_fetch_array($result,MYSQLI_BOTH))//显示标题
 	{
 		echo"{$row['title']}<br/>";
 	}
 	mysqli_free_result($result);
-	function ai($con)
+	function ai($con)//显示目录
 	{
 		$conn=mysqli_connect("localhost","root","123","blog");
 		$sql="SELECT * FROM article WHERE type='$con' ";
@@ -76,17 +76,31 @@
   <div class="article-area">
   <div class="article-imformation">
       <span><?php $result=connect($id);
-	while($row=mysqli_fetch_array($result,MYSQLI_BOTH))
+	while($row=mysqli_fetch_array($result,MYSQLI_BOTH))//显示时间
 	{
 		echo substr($row['reg_date'],0,16);
+		$title=$row['title'];
 	}
 	mysqli_free_result($result);
 ?></span>
+	<div class="label">
+	<?php	
+		$conn=mysqli_connect("localhost","root","123","blog");
+		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
+		$sql="SELECT * FROM tag WHERE title='$title'";//显示标签
+		mysqli_select_db($conn,"blog");
+		$result=mysqli_query($conn,$sql);
+		while($row=mysqli_fetch_array($result,MYSQLI_BOTH))
+		{
+			echo "<a href='tag_class_unlogined.php?tag={$row['tag']}&p=1'>{$row['tag']}</a>";
+		}
+	?>
+	</div>
   </div>
   <div class="text">
   <p><?php
 	$result=connect($id);
-	while($row=mysqli_fetch_array($result,MYSQLI_BOTH))
+	while($row=mysqli_fetch_array($result,MYSQLI_BOTH))//长文章分页
 	{
 		$page=$_GET['p'];
 		$sum=mb_strlen($row['content']);
