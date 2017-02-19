@@ -85,6 +85,7 @@
 ?></span>
 	<div class="label">
 	<?php	
+		echo "标签:";
 		$conn=mysqli_connect("localhost","root","","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 		$sql="SELECT * FROM tag WHERE title='$title'";//显示标签
@@ -133,7 +134,14 @@
 			}
 			for($i=$start;$i<=$end;$i++)
 			{
-				$page_banner.="<a href=".'article_unlogined.php'."?id=$id"."&p=".$i.">{$i}</a>";
+				if($i==$page)
+				{
+					$page_banner.="<a class='active' href=".'article_unlogined.php'."?id=$id"."&p=".$i.">{$i}</a>";
+				}
+				else
+				{
+					$page_banner.="<a href=".'article_unlogined.php'."?id=$id"."&p=".$i.">{$i}</a>";
+				}
 			}
 			if($page<$pages)
 			{

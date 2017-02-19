@@ -57,12 +57,12 @@
     <h1>修改你的文章</h1>
  <?php   echo"<input type='text' name='title' id='title' class='title' maxlength='50' 
 	value='$title' required>"; ?>
+	 <?php echo"<input type='text' name='tag' id='label' class='label' maxlength='50'value='$tag' required>"; ?>
   </div>
   <div class="article-area">
  <?php 
 	echo"<textarea cols='100' rows='17' name='content'  required >$content</textarea>"; ?>
   </div>
- <?php echo"<input type='text' name='tag' id='label' class='label' maxlength='50'value='$tag' required>"; ?>
 <div class="checkbox-area">
   <h2>给你的文章分个类吧:</h2>
  <input type="checkbox" value="FE"  name="type" /><label for="checkbox1">FE</label>
