@@ -89,9 +89,9 @@
 	mysqli_free_result($result);
 ?></span>
 	<div class="label">
-	<?php	
-		echo "标签:";
-		$conn=mysqli_connect("localhost","root","","blog");
+	<p>标签:</p>
+	<?php
+		$conn=mysqli_connect("localhost","root","123","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 		$sql="SELECT * FROM tag WHERE title='$title'";//显示标签
 		mysqli_select_db($conn,"blog");
