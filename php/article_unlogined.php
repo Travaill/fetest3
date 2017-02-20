@@ -86,7 +86,7 @@
 	<div class="label">
 	<p>标签:</p>
 	<?php	
-		$conn=mysqli_connect("localhost","root","123","blog");
+		$conn=mysqli_connect("localhost","root","","blog");
 		if($conn->connect_error) {die("连接失败:".$conn->conn_error);}
 		$sql="SELECT * FROM tag WHERE title='$title'";//显示标签
 		mysqli_select_db($conn,"blog");
