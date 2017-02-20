@@ -53,6 +53,10 @@ h2
   color: white;
   line-height: 2em;
 }
+.FE .article-title-FE a:hover
+{
+  color: #ffbb76;
+}
 .FE .container
 {
   width: 60%;
@@ -251,7 +255,10 @@ h2
   line-height: 2em;
 }
 
-
+.article-title-PHP a:hover
+{
+  color: #ffbb76;
+}
 .JAVA
 {
   height: 400px;
@@ -326,7 +333,10 @@ h2
   color: white;
   line-height: 2em;
 }
-
+.article-title-JAVA a:hover
+{
+  color: #ffbb76;
+}
 
 
 
@@ -401,4 +411,8 @@ h2
   font-size: 22px;
   color: white;
   line-height: 2em;
+}
+.article-title-Unity a:hover
+{
+  color: #ffbb76;
 }
