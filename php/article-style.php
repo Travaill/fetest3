@@ -154,7 +154,10 @@
 				$page_banner.="<a href=".'article-style.php'."?id=$id"."&p=".($pages).">尾页</a>";
 			}
 		}
-		echo $page_banner;
+		if($pages!=1)
+		{
+			echo $page_banner;
+		}
 	}
 	mysqli_free_result($result);
 ?></li>
